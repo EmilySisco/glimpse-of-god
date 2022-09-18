@@ -124,13 +124,43 @@ header {
 }
 
 .container .text-right h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    color:rgb(38, 38, 38);
 }
 
 .container .text-left h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    color:rgb(38, 38, 38);
+}
+
+.tape-right {
+    background-color: rgba(250, 250, 206, 0.5);
+    border: 1px solid rgb(112, 103, 2, 0.3);
+    box-shadow: 0px 2px rgba(148, 148, 148, 0.3);
+    width: 300px;
+    height: 45px;
+    position: absolute;
+    top: 50px;
+    left: 130px;
+    z-index: 1;
+
+    transform: rotate(-10deg);
+}
+
+.tape-left {
+    background-color: rgba(250, 250, 206, 0.5);
+    border: 1px solid rgb(112, 103, 2, 0.3);
+    box-shadow: 0px 2px rgba(148, 148, 148, 0.3);
+    width: 300px;
+    height: 45px;
+    position: absolute;
+    top: 50px;
+    right: 130px;
+    z-index: 1;
+
+    transform: rotate(10deg);
 }
 
 
@@ -153,20 +183,21 @@ img {
     align-items: center;
     justify-content: space-between;
     gap:0.5rem;
+    position: relative;
 }
 
 .container .rotate-right {
-    transform: rotate(-15deg);
-    box-shadow: 10px 7px 5px rgba(24, 24, 24, 0.7);
+    transform: rotate(-10deg);
+    box-shadow: 0px 10px 7px 5px rgba(24, 24, 24, 0.5);
 }
 
 .container img {
-    box-shadow: 0px 3px 2px 2px rgba(24, 24, 24, 0.7);
+    box-shadow: 0px 3px 2px 2px rgba(24, 24, 24, 0.2);
 }
 
 .container .rotate-left {
-    transform: rotate(15deg);
-    box-shadow: 0px 10px 7px 5px rgba(24, 24, 24, 0.7);
+    transform: rotate(10deg);
+    box-shadow: 0px 10px 7px 5px rgba(24, 24, 24, 0.5);
 }
 
 .card {
@@ -175,18 +206,10 @@ img {
     padding-bottom: 140px;
     border: 1px solid rgba(148, 148, 148, 0.5);
 
-    transform:translateX(400%);
     transition: all 1s ease-in;
+    transform: translateX(400%);   
 }
 
-
-.box:nth-of-type(even) {
-    transform: translateX(-400%);   
-}
-
-.card.show {
-    transform: translateX(0);
-}
 
 .card h1 {
     font-size: 2em;
@@ -200,15 +223,15 @@ img {
   flex:1;
 }
 
-@media(max-width: 786px) {
+@media(max-width: 549px) {
 
     img {
         width: 200px;
     }
 
     .card {
-        padding: 20px;
-        padding-bottom: 90px;
+        padding: 10px;
+        padding-bottom: 70px;
     }
 
     .container {
@@ -216,14 +239,14 @@ img {
     }
 
     .container .text-right h1 {
-        font-size: 1.3em;
+        font-size: 1.5em;
         text-align: center;
         padding-left: 50px;
 
     }
 
     .container .text-left h1 {
-        font-size: 1.3em;
+        font-size: 1.5em;
         text-align: center;
         padding-right: 50px;
 
@@ -242,8 +265,27 @@ img {
         font-size: 1em;
     
     }
+
+    .tape-right {
+        width: 130px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        left: 75px;
+        z-index: 1;
     
+    }
+    
+    .tape-left {
+        width: 130px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        right: 75px;
+        z-index: 1;
+    }
 }
+
 
 .footer {
     background-color: rgb(49, 48, 48);

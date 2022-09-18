@@ -29,3 +29,45 @@ function checkboxes ( ) {
         }
     });
 }
+
+
+const tapesRight = document.querySelectorAll(".tape-right");
+
+window.addEventListener( 'scroll', movetapeRight);
+
+function movetapeRight ( ) {
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    tapesRight.forEach( tape => {
+        const tapeTop = tape.getBoundingClientRect().top;
+
+        if( tapeTop < triggerBottom) {
+            tape.classList.add("show");
+        }
+
+        else {
+            tape.classList.remove("show");
+        }
+    });
+}
+
+
+const tapesLeft = document.querySelectorAll(".tape-left");
+
+window.addEventListener( 'scroll', movetapeLeft);
+
+function movetapeLeft ( ) {
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    tapesLeft.forEach( tape => {
+        const tapeTop = tape.getBoundingClientRect().top;
+
+        if( tapeTop < triggerBottom) {
+            tape.classList.add("show");
+        }
+
+        else {
+            tape.classList.remove("show");
+        }
+    });
+}
