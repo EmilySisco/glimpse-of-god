@@ -12,9 +12,7 @@ body {
 }
 
 .page {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: relative;
     left:0;
     transition: all 400ms;
 }
@@ -64,6 +62,11 @@ header {
     background: rgba(188, 188, 188, 0.776);
 }
 
+.menu ul li {
+    list-style: none;
+}
+
+
 .menu.active {
     transform: translateX(0);
 }
@@ -84,24 +87,21 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 0;
 
 }
 
 .hero video {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
-    width:100%;
-    height: 100%;
     object-fit: cover;
     box-shadow: 3px 3px 3px 3px rgba(1, 1, 1, 0.7);
-}
-
-.hero .overlay {
-    position: absolute;
-    z-index: 0;
-    width:100%;
     height: 100%;
-    mix-blend-mode: lighten;
+    width: 100%;
 }
 
 .titlegroup h1 {
@@ -136,15 +136,16 @@ header {
 
 img {
     width: 400px;
-
 }
+
 .cards {
-    display: flex;
     flex-direction: column;
+    width: 100%;
+    position: relative;
 }
 
 .container {
-    background: rgba(188, 188, 188, 0.776);
+    background: rgb(169, 167, 167);
     padding: 100px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -156,16 +157,16 @@ img {
 
 .container .rotate-right {
     transform: rotate(-15deg);
-    box-shadow: 10px 7px 5px rgb(150, 149, 149, 0.7);
+    box-shadow: 10px 7px 5px rgba(24, 24, 24, 0.7);
 }
 
 .container img {
-    box-shadow: 0px 3px 2px 2px rgba(183, 181, 181, 0.4);
+    box-shadow: 0px 3px 2px 2px rgba(24, 24, 24, 0.7);
 }
 
 .container .rotate-left {
     transform: rotate(15deg);
-    box-shadow: 0px 10px 7px 5px rgb(150, 149, 149, 0.7);
+    box-shadow: 0px 10px 7px 5px rgba(24, 24, 24, 0.7);
 }
 
 .card {
@@ -245,8 +246,25 @@ img {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-color: rgb(49, 48, 48);
+    width: 100%;
+    padding: 15px;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+.content ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    
 }
